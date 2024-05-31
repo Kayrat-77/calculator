@@ -46,9 +46,15 @@ public class Converter {
         romanKeyMap.put("IX", "9");
         romanKeyMap.put("X", "10");
     }
+    
     public boolean isRoman(String number){
         return romanKeyMap.containsKey(number);
     }
+
+    public boolean isArabian(String number) {
+        return romanKeyMap.containsValue(number);
+    }
+    
     public String romanToArab(String s) {
         return romanKeyMap.get(s);
     }
